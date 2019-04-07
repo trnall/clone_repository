@@ -1,0 +1,8 @@
+<!--kefu.wxml-->
+<view class="kefu">
+<view class="kefu_btn">
+<contact-button type="default-light" size="80"></contact-button>
+</view>
+ 
+ <view class="con">请点击图标，随时随地沟通！</view>
+</view>

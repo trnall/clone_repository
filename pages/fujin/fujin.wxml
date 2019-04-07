@@ -1,0 +1,40 @@
+<!-- 职位详情 -->
+  <view class="main-bg main-w1">
+
+   <block  wx:for-items="{{searchList}}">
+<!-- 第一条 -->
+  <view class="main-box dp-recommend-detail">
+    <!-- 上面内容 -->
+    <view class="main-box dp-recommend-top">
+      <!-- 左边 -->
+      <view bindtap="workDetail" data-id="{{item.id}}" class="main-lf main-w8">
+        <!-- 上 -->
+        <view class="">
+          <text class="main-w6 main-inline main-f2 main-ellipsis main-va">{{item.job_title}}</text>
+          <text class="main-tac main-w4 main-inline main-va main-ellipsis" style="color:#3FA8E1">{{item.money}}</text>
+        </view>
+        <!-- 下 -->
+        <view class="main-pt">
+          <text class="main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">类型：{{item.job_type}}</text>
+          <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">人数：{{item.had_signed}}/{{item.total_number}}</text>
+          <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">时长：{{item.work_time}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 下面内容 -->
+    <view bindtap="workDetail" data-id="{{item.id}}" class="main-box main-w1 dp-recommend-bottom">
+      <text class="main-f1 main-c4 main-ellipsis-2">日期：{{item.start_time}}</text>
+      <text class="main-f1 main-c4 main-ellipsis-2">地址：{{item.address}}</text>
+    </view>
+    <!-- 右边电话位置 -->
+    <view bindtap="call" data-tel="{{item.phone}}" class="main-rt main-tac phone">
+      <image class="main-img03" src="../img/tel.png"></image>
+    </view>
+    <view class="main-rt main-w2 main-tac wei">
+      <contact-button type="default-light" size="20"></contact-button>
+    </view>
+  </view>
+</block>
+<view class="more" style="line-height:32rpx;text-align:center;color:#aaa;font-size:24rpx;padding:20rpx;background:#f1f1f1;">{{text}} </view>
+  </view>
+

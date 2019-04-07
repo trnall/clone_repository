@@ -1,0 +1,34 @@
+<!--contact.wxml-->
+<view class="container main-none">
+
+  <view class="main-bg main-w1 main-box dp-contact-pd1">
+
+    <!-- 地图 -->
+    <view class="main-w1">
+      <!-- <image class="main-w1" src="../img/map.jpg"></image> -->
+      <map id="map" class="main-w1 map" longitude="113.570300" latitude="34.795110" scale="{{scale}}" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location></map>
+    </view>
+
+    <!-- 信息 -->
+    <view class="main-box dp-contact-pd2">
+
+      <text class="main-inline main-w1 main-f2">河南鲸火劳务外包服务有限公司</text>
+
+      <!-- 图文信息 -->
+      <view class="main-over main-box dp-contact-mt">
+        <view class="main-lf dp-contact-pt">
+          <image class="main-img01" src="../img/address.jpg"></image>
+        </view>
+        <text class="main-w8 main-lf main-f1 main-c4 dp-contact-pl" style="width:90%;">郑州高新技术产业开发区瑞达路60号院15幢南4单元5层41号</text>
+      </view>
+
+      <view bindtap="callPhone" data-phone="0371一26662888" class="main-box dp-contact-mt">
+        <image class="main-img01 main-va" src="../img/phone.jpg"></image>
+        <text class="main-f1 main-c4 main-va dp-contact-pl">13937138468</text>
+      </view>
+
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,22 @@
+/* contact.wxss */
+page{
+  background:#fff;
+}
+.map{
+  height: 500rpx;
+}
+.dp-contact-pd1{
+  padding:40rpx;
+}
+.dp-contact-pd2{
+  padding:20rpx;
+}
+.dp-contact-pt{
+  padding-top:10rpx;
+}
+.dp-contact-mt{
+  margin-top:20rpx;
+}
+.dp-contact-pl{
+  padding-left:20rpx;
+}

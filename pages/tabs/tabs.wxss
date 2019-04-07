@@ -1,0 +1,8 @@
+/* tabs.wxss */
+.dp-pd01{
+    padding: 20rpx 0;
+}
+.dp-tabs-active{
+    border-bottom:1px solid #D84C29;
+    color:#D84C29;
+}

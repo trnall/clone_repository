@@ -1,0 +1,18 @@
+.kefu{
+  width: 100%;
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 45%;
+}
+.kefu_btn{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #3FA8E1;
+  margin-bottom: 20rpx;
+}
+.kefu_btn contact-button{
+  margin-top: 15rpx;
+}

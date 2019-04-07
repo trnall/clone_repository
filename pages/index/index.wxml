@@ -1,0 +1,148 @@
+<!--index.wxml-->
+<view class="container main-none">
+
+  <!--<view  bindtap="bindViewTap" class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="usermotto">
+        <text class="user-motto">{{motto}}</text>
+    </view>-->
+
+  <!-- 轮播图 -->
+  <view class="main-w1 main-none">
+    <swiper class="main-w1 main-swiper-hg" indicator-dots="{{ swiperDian }}" autoplay="{{ swiperAuto }}" interval="{{ swiperInterval }}">
+      <swiper-item wx:for-items="{{ banList }}">
+        <image class="main-w1 main-swiper-hg" src="{{ imgUrl }}{{ item.ad_code }}"></image>
+      </swiper-item>
+      <!-- <swiper-item>
+                <image class="main-w1 main-swiper-hg" src="../img/ban.jpg"></image> 
+            </swiper-item>
+            <swiper-item>
+                <image class="main-w1 main-swiper-hg" src="../img/ban.jpg"></image> 
+            </swiper-item>   -->
+    </swiper>
+    <!-- <image class="main-w1" src="../img/ban.jpg"></image> -->
+
+    <!-- 搜索固定定位 -->
+    <view class="main-w1 main-box dp-search">
+
+      <!-- 地址 -->
+      <view class="main-lf main-w2 main-ellipsis">
+        <text bindtap="chooseCity" class="main-c1 chooseCity">{{ city }}</text>
+      </view>
+
+      <!-- 搜索框 -->
+      <view class="main-lf main-w6 main-bg main-box dp-search-02">
+
+        <input class="main-lf main-w8" bindinput="searchContent" type="text" placeholder="请输入内容" />
+
+        <view  bindtap="search" class="main-tac search">
+          <image class="main-va main-img01" src="../img/search.png" style="width:40rpx;height:40rpx;"></image>
+        </view>
+
+      </view>
+
+      <!-- 个人中心 -->
+      <view class="main-lf main-w2 main-tar">
+        <image bindtap="myInfo" class="main-img01 main-inline main-va dp-search-03" src="../img/people.png"></image>
+      </view>
+
+    </view>
+
+  </view>
+  <!-- 公告 -->
+  <view class="gonggao">
+    <view class="name">公告</view>
+    <view class="gonggao_icon">
+      <image src="../img/gonggao.png" class="main-img01 main-inline"></image>
+    </view>
+    <swiper class="gonggaoList" vertical="true" autoplay="true" interval="3000" bindtap="notice">
+      <swiper-item class="gonggaoItem" wx:for-items="{{noticeList}}">
+        <view>{{item.topic_title}}</view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 九宫格 -->
+  <view class="iconList">
+    <view class="iconLeft" bindtap="all">
+      <view class="iconText">
+        <view class="iconTitle">全部职位</view>
+        <view class="iconDis">专业更专注</view>
+      </view>
+      <view class="iconImgLeft">
+        <image src="../img/all.jpg"></image>
+      </view>
+    </view>
+    <view class="iconTop" bindtap="fujin">
+      <view class="iconText">
+        <view class="iconTitle">附近工作</view>
+        <view class="iconDis">附近工作更方便</view>
+      </view>
+      <view class="iconImgTop">
+        <image src="../img/fujin.jpg"></image>
+      </view>
+    </view>
+    <view class="iconTop iconBottom" bindtap="pater">
+      <view class="iconText">
+        <view class="iconTitle">商家合作</view>
+        <view class="iconDis">专业更专注</view>
+      </view>
+      <view class="iconImgTop">
+        <image src="../img/hezuo.jpg"></image>
+      </view>
+    </view>
+  </view>
+  <!-- 职位推荐 -->
+  <view class="main-bg main-box dp-recommend">
+
+    <text class="main-lf">职位推荐</text>
+
+    <text bindtap="workList" data-text="全部工作" class="main-rt"> 更多> </text>
+
+  </view>
+
+  <!-- 职位详情 -->
+  <view class="main-bg main-w1">
+
+    
+   <block  wx:for-items="{{recomList}}">
+<!-- 第一条 -->
+  <view class="main-box dp-recommend-detail"  data-id="{{item.id}}">
+    <!-- 上面内容 -->
+    <view class="main-box dp-recommend-top">
+      <!-- 左边 -->
+      <view bindtap="workDetail" class="main-lf main-w8"  data-id="{{item.id}}">
+        <!-- 上 -->
+        <view class=""  data-id="{{item.id}}">
+          <text class="main-w6 main-inline main-f2 main-ellipsis main-va">{{item.job_title}}</text>
+          <text class="main-tac main-w4 main-inline main-va main-ellipsis" style="color:#3FA8E1">{{item.money}}</text>
+        </view>
+        <!-- 下 -->
+        <view class="main-pt"  data-id="{{item.id}}">
+          <text class="main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">类型：{{item.job_type}}</text>
+          <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">人数：{{item.had_signed}}/{{item.total_number}}</text>
+          <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">时长：{{item.work_time}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 下面内容 -->
+    <view bindtap="workDetail" data-id="{{item.id}}" class="main-box main-w1 dp-recommend-bottom">
+      <text class="main-f1 main-c4 main-ellipsis-2">日期：{{item.start_time}}</text>
+      <text class="main-f1 main-c4 main-ellipsis-2">地址：{{item.address}}</text>
+    </view>
+    <!-- 右边电话位置 -->
+    <view bindtap="call" data-tel="{{item.phone}}" class="main-rt main-tac phone">
+      <image class="main-img03" src="../img/tel.png"></image>
+    </view>
+    <view class="main-rt main-w2 main-tac wei" style="bottom:120rpx;">
+      <contact-button type="default-light" size="20"></contact-button>
+    </view>
+  </view>
+</block>
+
+  </view>
+
+<view class="more" style="line-height:32rpx;text-align:center;color:#aaa;font-size:24rpx;padding:20rpx;">{{text}}</view>
+
+</view>

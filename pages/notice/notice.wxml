@@ -1,0 +1,19 @@
+<!--notice.wxml-->
+<view class="container main-none">
+
+  <!-- 第一条 -->
+  <view bindtap="noticeDetail" wx:for-items="{{noticeList}}" data-id="{{ item.topic_id }}" class="main-bg main-w1 main-over main-box dp-notice-top">
+
+    <!-- 图片部分 -->
+    <view class="main-w3 main-lf">
+      <image class="dp-notice-img" src="{{ imgUrl }}{{ item.topic_image }}"></image>
+    </view>
+
+    <!-- 文字部分 -->
+    <view class="main-w7 main-lf main-box dp-notice-title">
+      <text class="main-inline main-w1 main-c2 main-ellipsis main-f2 main-b">{{ item.topic_title }}</text>
+      <text class="main-inline main-w1 main-ellipsis-2 main-f1 main-c4">{{ item.topic_content }}</text>
+      <text class="main-inline main-w1 main-c5 dp-notice-pt">{{ item.add_time }}</text>
+    </view>
+  </view>
+</view>

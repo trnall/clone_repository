@@ -1,0 +1,91 @@
+page {
+  font-family: "微软雅黑";
+}
+
+.wallet {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  background: #1b82d1;
+  color: #fff;
+}
+
+.title {
+  margin-left: 30rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  padding-top: 40rpx;
+}
+
+.money {
+  font-size: 120rpx;
+  font-weight: 500;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+.btn {
+  position: absolute;
+  top: 120rpx;
+  right: 100rpx;
+  width: 100rpx;
+  height: 80rpx;
+  font-size: 36rpx;
+  border-radius: 10rpx;
+  line-height: 80rpx;
+  text-align: center;
+  box-shadow: -1px 0 1px #fff, /*左边阴影*/
+              1px 0 5px #000,/*右边阴影*/
+              0 -1px 1px #fff,/*顶部阴影*/
+              0 1px 5px #000; /*底边阴影*/
+}
+.tx_alertWrap{
+  position: fixed;  
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  z-index: 222222;
+  top: 0;  
+}
+.tx_alert{
+  position: fixed;
+  z-index: 333333;
+  width: 80%;
+  top:30%;
+  padding: 5%;
+  left: 5%;
+  height: 400rpx;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 20rpx; 
+  text-align: center;
+}
+.tx_title{
+  line-height: 80rpx;
+  margin-bottom: 50rpx;
+}
+.close{
+  position: absolute;
+  font-size: 52rpx;
+  color: #aaa;
+  top: 30rpx;
+  right: 30rpx;
+}
+.input{
+  width: 70%;
+  margin: 0 auto;
+}
+.tx_alert input{
+  margin-bottom: 50rpx;
+  border-bottom: 1px solid #ddd;
+}
+.tx_btn{
+  width: 60%;
+  margin: 0 auto;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background: #1b82d1;
+  border-radius: 20rpx;
+  margin-top: 100rpx;
+}

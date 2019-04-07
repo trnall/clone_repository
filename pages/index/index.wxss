@@ -1,0 +1,193 @@
+/**index.wxss**/
+page{
+    font-family: Microsoft YaHei;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.dp-nine{
+  display:flex;
+}
+.dp-nine-content{
+  /* flex: 1; */
+  width: 25%;
+  padding:30rpx 0;
+  border-right: 1px solid #E4E4E4;
+  border-bottom: 3px solid #E4E4E4;
+}
+.dp-nine-content image{
+  display:inline-block;
+  width:130rpx;
+  height:130rpx;
+}
+.dp-nine-content text{
+  color: #636363;
+  font-weight: 500;
+  font-size: 32rpx;
+  padding-top: 10rpx;
+}
+/* 推荐 */
+.dp-recommend{
+  width:100%;
+  margin-top:20rpx;
+  padding:20rpx;
+  overflow:auto;  
+}
+.dp-recommend text{
+  color:#333;
+}
+.dp-recommend text:nth-child(1){
+  padding-left:20rpx;
+  font-size: 36rpx;
+}
+.dp-recommend text:nth-child(2){
+  padding-right:20rpx;
+  font-size: 35rpx;
+}
+.dp-recommend-detail{
+  padding:30rpx 40rpx 10rpx;
+  border-top:2px solid #ddd;
+  position: relative;
+}
+.dp-recommend-top{
+  border-bottom:1px dotted #DEDEDE;
+  overflow:auto;
+  padding:20rpx 0;
+  width: 80%;
+}
+.dp-recommend-bottom{
+  padding:20rpx 0;
+}
+.dp-recommend-bottom text:nth-child(1){
+  flex:1;
+}
+.dp-recommend-bottom text:nth-child(2){
+  flex:3;
+}
+
+/* 搜索 */
+.dp-search{
+  position:absolute;
+  top:0;
+  left:0;
+  overflow:auto;
+  padding:20rpx 40rpx;
+  font-size: 30rpx;
+}
+.dp-search-02{
+  padding:5rpx 20rpx;
+  border-radius:10rpx;
+}
+.dp-search-03{
+  padding-left:34rpx;
+}
+.chooseCity{
+  height: 44rpx;
+  line-height: 44rpx;
+}
+.search{
+  width:20%;
+height:40rpx;
+position:absolute;
+right:150rpx;
+z-index:666;
+
+}
+/*公告  */
+.gonggao view{
+  display: inline-block;
+}
+.gonggao {
+  width: 95%;
+  background: #fff;
+  padding-left: 5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+  overflow: hidden;
+}
+.gonggao view image{
+  vertical-align: middle;
+  margin: 0 20rpx;
+}
+.name{
+  color: #3FA8E1;
+}
+.gonggaoList{
+  margin-left: 30rpx;
+  position: absolute;
+  top: 0;
+  width: 75%;
+  left: 25%;
+  height: 80rpx;
+  overflow: hidden;
+}
+.gonggaoItem{
+  height: 80rpx;
+}
+/*九宫格*/
+.iconList{
+  width: 100%;
+  border-top: 2px solid #ddd; 
+   border-bottom: 2px solid #ddd; 
+   background: #fff;
+   height: 300rpx;
+}
+.iconLeft{
+  width: 30%;
+  float: left;
+  text-align: center;
+  border-right: 2px solid #ddd;
+    padding: 30rpx 0 0 0;
+}
+.iconLeft image{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 10rpx auto;
+}
+.iconTop{
+  width: 69%;
+  height: 50%;
+  float: left;
+}
+.iconImgTop image{
+  width: 240rpx;
+  height: 148rpx;
+}
+.iconTop .iconText{
+  float: right;
+  width: 40%;
+}
+.iconBottom{
+   border-top: 1px solid #ddd; 
+}
+.iconTop .iconText{
+ margin-top: 30rpx;
+ text-align: center;
+ margin-right: 10%;
+}
+.iconText {
+   line-height: 40rpx;
+}
+.iconDis{
+  font-size: 24rpx;
+  color: #aaa;
+}

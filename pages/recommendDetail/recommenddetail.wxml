@@ -1,0 +1,25 @@
+<!--recommenddetail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container main-none">
+
+  <!-- 标题 -->
+  <view class="main-bg main-w1 dp-recommend">
+
+    <image class="main-w1 dp-recommend-hg" src="{{ imgUrl }}{{ goodsList.thumb }}"></image>
+
+    <view class="main-box dp-recommend-pd">
+      <text class="main-inline main-w1 main-c2 main-f2 dp-recommend-fw">{{ goodsList.cat_name }}</text>
+      <text class="main-inline main-w1 main-f1 main-c4 dp-recommend-pt">{{ goodsList.work_address }}</text>
+    </view>
+
+  </view>
+
+  <!-- 公司描述 -->
+  <view class="main-w9 main-bg main-box dp-recommend-describe">
+    <text class="main-inline main-w1 main-f2 main-c2 dp-recommend-title">公司描述</text>
+    <view class="main-c5 dp-recommend-lh main-detail-img">
+      <template is="wxParse" data="{{wxParseData:goodsContent.nodes}}" />
+    </view>
+  </view>
+
+</view>

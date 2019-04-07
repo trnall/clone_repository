@@ -1,0 +1,40 @@
+<!--recommend.wxml-->
+<view class="container main-none">
+
+  <!-- 第一条 -->
+  <view bindtap="recommendDetail"  wx:for-items="{{recomList}}" data-id="{{ item.cat_id }}" class="main-bg main-w1 dp-recommend">
+
+    <image class="main-w1 dp-recommend-hg" src="{{ imgUrl }}{{ item.thumb }}"></image>
+
+    <view class="main-box dp-recommend-pd">
+      <text class="main-inline main-w1 main-c2 main-f2 dp-recommend-fw">{{ item.cat_name }}</text>
+      <text class="main-inline main-w1 main-f1 main-c4 dp-recommend-pt">{{ item.work_address }}</text>
+    </view>
+
+  </view>
+
+  <!-- 第二条 
+  <view bindtap="recommendDetail" class="main-bg main-w1 dp-recommend">
+
+    <image class="main-w1 dp-recommend-hg" src="../img/commend_bg.jpg"></image>
+
+    <view class="main-box dp-recommend-pd">
+      <text class="main-inline main-w1 main-c2 main-f2 dp-recommend-fw">河南春泥计算机科技有限公司</text>
+      <text class="main-inline main-w1 main-f1 main-c4 dp-recommend-pt">郑州市金水区</text>
+    </view>
+
+  </view>-->
+
+  <!-- 第三条 
+  <view bindtap="recommendDetail" class="main-bg main-w1 dp-recommend">
+
+    <image class="main-w1 dp-recommend-hg" src="../img/commend_bg.jpg"></image>
+
+    <view class="main-box dp-recommend-pd">
+      <text class="main-inline main-w1 main-c2 main-f2 dp-recommend-fw">河南春泥计算机科技有限公司</text>
+      <text class="main-inline main-w1 main-f1 main-c4 dp-recommend-pt">郑州市金水区</text>
+    </view>
+
+  </view>-->
+
+</view>

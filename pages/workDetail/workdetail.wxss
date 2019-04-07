@@ -1,0 +1,133 @@
+/* workdetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+.main-none{
+  padding-bottom:78rpx;
+}
+.dp-workdetail{
+  padding:30rpx;
+  margin:20rpx auto;
+  border-radius:10rpx;
+}
+.dp-price{
+  color:#25A4FF;
+  font-weight:500;
+}
+.dp-workdetail-lh{
+  line-height:50rpx;
+}
+
+.dp-company{
+  border-radius:0;
+}
+.dp-company-content{
+  margin-left:140rpx;
+  margin-right:40rpx;
+}
+.dp-company-content text:nth-child(1),.dp-company-content text:nth-child(2){
+  padding-top:10rpx;
+}
+.dp-workdetail-btn{
+  /* position:fixed;
+  bottom:0;
+  background:#F8A809;
+  padding:10rpx 0;
+  margin-bottom:10rpx;
+  border-radius:50rpx;
+  z-index: 10000; */
+  position:fixed;
+  bottom:0;
+  margin:10rpx 0;
+  z-index:10000;
+}
+.dp-workdetail-btn text{
+    background:#F8A809;
+    border-radius:50rpx;
+    padding:10rpx 0;
+}
+.dp-recommend{
+  width:100%;
+  margin-top:20rpx;
+  padding:20rpx;
+  overflow:auto;  
+}
+.dp-recommend text{
+  color:#333;
+}
+.dp-recommend text:nth-child(1){
+  padding-left:20rpx;
+  font-size: 36rpx;
+}
+.dp-recommend text:nth-child(2){
+  padding-right:20rpx;
+  font-size: 35rpx;
+}
+.dp-recommend-detail{
+  padding:0 40rpx 10rpx;
+  border-top:2px solid #ddd;
+  position: relative;
+}
+.dp-recommend-top{
+  border-bottom:1px dotted #DEDEDE;
+  overflow:auto;
+  padding:20rpx 0;
+  width: 80%;
+}
+.dp-recommend-bottom{
+  padding:20rpx 0;
+}
+.dp-recommend-bottom text:nth-child(1){
+  flex:1;
+}
+.dp-recommend-bottom text:nth-child(2){
+  flex:3;
+}
+/*完善简历弹框  */
+.alert{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .6);
+  z-index: 10001;
+  top: 0;
+}
+.alert_body{
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  background: #fff;
+  height: 400rpx;
+  top: 50%;
+  margin-top: -250rpx;
+  padding: 10% 15%;
+  text-align: center;
+  border-radius: 20rpx;
+}
+.close{
+  font-size: 64rpx;
+  color: #aaa;
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+}
+.wsjl{
+  font-size: 64rpx;
+  margin-top: 40rpx;
+  font-weight: 600;
+  line-height: 80rpx;
+}
+.tip{
+  font-size: 32rpx;
+  color: #999;
+  margin: 60rpx 0;
+  line-height: 48rpx;
+}
+.wsjl_btn{
+  width: 100%;
+  height: 80rpx;
+  font-size: 40rpx;
+  line-height: 80rpx;
+  color: #fff;
+  margin-top: 30rpx;
+  background: #25A4FF;
+  border-radius: 10rpx;
+}

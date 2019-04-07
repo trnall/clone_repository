@@ -1,0 +1,122 @@
+<!--workdetail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container main-none">
+
+  <!-- 第一块内容 -->
+  <!-- <view class="main-bg main-w9 main-box dp-workdetail">
+
+        <view class="main-flex">
+        <text class="main-flex01">{{ infoList[0].title }}</text>
+        <text class="main-flex01 main-tar"><text class="main-f2 dp-price">{{ infoList[0].money }}</text>元/月</text>
+        </view>
+
+        <view class="main-flex main-pt">
+        <text class="main-flex01 main-f1 main-c4">工作地点:{{ infoList[0].work_address }}</text>
+        <text class="main-flex01 main-f1 main-c4 main-tar">工作时间:{{ infoList[0].work_time }}</text>
+        </view>
+
+    </view> -->
+  <view class="main-bg main-w1">
+
+    <!-- 第一条 -->
+    <view class="main-box dp-recommend-detail">
+
+      <!-- 上面内容 -->
+      <view class="main-box dp-recommend-top">
+
+        <!-- 左边 -->
+        <view bindtap="workDetail" class="main-lf main-w8">
+
+          <!-- 上 -->
+          <view class="">
+
+            <text class="main-w6 main-inline main-f2 main-ellipsis main-va">{{infoList.job_title}}</text>
+
+            <text class="main-tac main-w4 main-inline main-va main-ellipsis" style="color:#3FA8E1">{{infoList.money}}元/{{infoList.settlement_cycle}}</text>
+
+          </view>
+
+          <!-- 下 -->
+          <view class="main-pt">
+
+            <text class="main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">类型：{{infoList.job_type}}</text>
+
+            <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">人数：{{infoList.had_signed}}/{{infoList.total_number}}</text>
+            <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">时长：{{infoList.work_time}}</text>
+
+          </view>
+
+        </view>
+
+      </view>
+
+      <!-- 下面内容 -->
+      <view bindtap="workDetail" data-id="{{item.article_id}}" class="main-box main-w1 dp-recommend-bottom">
+
+        <text class="main-f1 main-c4 main-ellipsis-2">日期：{{infoList.start_time}}</text>
+
+        <text class="main-f1 main-c4 main-ellipsis-2">地址：{{infoList.address}}</text>
+
+      </view>
+      <!-- 右边电话位置 -->
+      <view bindtap="call" data-tel="{{infoList.phone}}" class="main-rt main-tac phone">
+      <image class="main-img03" src="../img/tel.png"></image>
+    </view>
+    <view class="main-rt main-w2 main-tac wei">
+      <contact-button type="default-light" size="20"></contact-button>
+    </view>
+
+    </view>
+
+  </view>
+
+  <!-- 第二块内容 -->
+  <view class="main-bg main-w9 main-box dp-workdetail">
+
+    <text class="main-inline main-w1 main-f2 main-pb">职位描述</text>
+
+    <view class="main-c5 dp-workdetail-lh">
+      <template is="wxParse" data="{{wxParseData:infoContent.nodes}}" />
+    </view>
+
+  </view>
+
+  <!-- 第三块内容 -->
+  <!-- <view class="main-bg main-w1 main-box main-over dp-workdetail dp-company">
+    
+        <image class="main-img02 main-va main-lf" src="https://lw.dasouwang.cn{{ infoList[0].work_name.logo }}"></image>
+
+        <view class="main-w8 main-box dp-company-content">
+        <text class="main-inline main-w1 main-f2 main-c2 main-ellipsis">{{ infoList[0].work_name.cat_name }}</text>
+        <text class="main-inline main-w1 main-c2">{{ infoList[0].work_name.work_address }}</text>
+        </view>
+    
+    </view> -->
+
+  <!-- 第四块内容 -->
+  <!-- <view class="main-bg main-w9 main-box dp-workdetail">
+    
+        <text class="main-inline main-w1 main-f2 main-pb">公司描述</text>
+
+        <view class="main-c5 dp-workdetail-lh main-detail-img">
+        <template is="wxParse" data="{{wxParseData:gsInfoContent.nodes}}" />
+        </view>
+    
+    </view> -->
+
+  <!-- 页脚固定定位 -->
+  <!-- <view class="main-w6 main-c1 main-tac main-f2 main-box dp-workdetail-btn">报名</view> -->
+  <view class="main-w1 main-tac dp-workdetail-btn">
+    <text data-id="{{ infoList.id }}" bindtap="signUp" class="main-inline main-w5 main-c1 main-box" style="width:70%;background:#4169E1;height:80rpx;line-height:60rpx;">{{baoming}}</text>
+  </view>
+  <!--完善简历弹框  -->
+  <view class="alert" hidden="{{show}}">
+    <view class="alert_body">
+      <view class="close" bindtap="close">×</view>
+      <view class="wsjl">请先完善简历</view>
+      <view class="tip">完善简历后才可以报名哦，请先完善简历</view>
+      <view class="wsjl_btn" bindtap="wsjl">完善简历</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,64 @@
+/* jianli.wxss */
+page{
+  font-family: "微软雅黑";
+}
+.main-none{
+  padding-bottom:80rpx;
+}
+.dp-jianli-pt{
+  padding-top: 10rpx;
+}
+.dp-jianli-pr{
+  padding-right: 40rpx;
+}
+.dp-jianli-img{
+  position:relative;
+}
+.dp-jianli-hg{
+  height:480rpx;
+}
+.dp-jianli-upload{
+  position:absolute;
+  top:40%;
+}
+
+.dp-jianli-info{
+  padding:0 20rpx;
+}
+.dp-jianli-info01{
+  padding:20rpx 0;
+  border-bottom:1px solid #EBEBEB;
+}
+.dp-jianli-info02{
+  color:#F7503D;
+  padding-right:10rpx;
+}
+.dp-jianli-lh{
+  line-height:50rpx;
+}
+
+.dp-jianli-save{
+    position:fixed;
+    bottom:20rpx;
+}
+.dp-jianli-btn{
+    background:#3FA8E1;
+    padding:10rpx 0;
+    border-radius:50rpx;
+}
+/* .dp-jianli-save{
+  position:fixed;
+  bottom:20rpx;
+  background:#F8A809;
+  border-radius:50rpx;
+  padding:10rpx 0;
+} */
+.dp-jianli-hide{
+    border-bottom: none;
+}
+
+.dp-input{
+    font-size: 28rpx;
+    padding-top: 2rpx;
+    color:#666;
+}

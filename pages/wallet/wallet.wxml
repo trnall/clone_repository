@@ -1,0 +1,29 @@
+<!--wallet.wxml-->
+<view class="wallet">
+  <view class="title">账户余额(元)</view>
+  <view class="money">{{money}}</view>
+  <view class="btn" bindtap="tixian">提现</view>
+</view>
+<view class="main-w1 main-bg main-box dp-mine-list">
+
+  <view bindtap="mingxi" class="main-w1 main-flex main-box dp-mine-list-content" style="height:100rpx;line-height:80rpx;padding:10rpx 20rpx;">
+    <view class="main-flex01">
+      <image class="main-img01 main-va" src="../img/wallet_icon.png" style="margin-right:20rpx;"></image>
+      <text class="main-va main-f2 main-c2 dp-mine-pl">钱包明细</text>
+    </view>
+
+    <view class="main-flex01 main-tar">
+      <image class="main-img01 main-va" src="../img/my_04.png"></image>
+    </view>
+  </view>
+</view>
+<view class="tx_alertWrap" hidden="{{alert}}">
+  <view class="tx_alert">
+    <view class="tx_title">提现金额</view>
+    <view class="close" bindtap="close">×</view>
+    <view class="input">
+      <input placeholder="请输入要提现的金额" bindinput="tx_money" />
+    </view>
+    <view class="tx_btn" bindtap="sure_btn">确定提现</view>
+  </view>
+</view>

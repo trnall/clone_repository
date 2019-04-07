@@ -1,0 +1,19 @@
+<!--mingxi.wxml-->
+<view class="mingxiList" wx:for-items="{{money_list}}">
+  <view class="mingxiItem">
+    <view class="item_icon"><image src="../img/mx_icon.png"></image></view>
+    <view class="top">
+    <text>{{item.type_name}}</text>
+    <text class="money">{{item.amount}}</text>
+    </view>
+    <view class="date">{{item.created_time}}</view>
+  </view>
+   <!-- <view class="mingxiItem">
+    <view class="item_icon"><image src="../img/mx_icon.png"></image></view>
+    <view class="top">
+    <text>工资</text>
+    <text class="money">+180</text>
+    </view>
+    <view class="date">2017-10-10 09:35</view>
+  </view> -->
+</view>

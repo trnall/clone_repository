@@ -1,0 +1,22 @@
+/* noticedetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+page,.container{
+  background:#fff;
+}
+.dp-notice-title{
+  padding:40rpx 30rpx;
+}
+.dp-notice-content{
+  padding:40rpx 0;
+}
+
+.dp-notice-content image{
+  width: 100%;
+}
+.dp-notice-content text{
+  display: inline-block;
+  width:100%;
+  padding-top: 20rpx;
+  color:#585858;
+  line-height: 50rpx;
+}

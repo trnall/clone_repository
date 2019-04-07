@@ -1,0 +1,68 @@
+<!--mine.wxml-->
+<view class="container main-none">
+
+  <!-- 头像 -->
+  <view class="main-w1 dp-mine">
+
+    <image class="main-w1 dp-mine-hg" src="../img/mine.jpg"></image>
+
+    <view class="dp-mine-info">
+      <image class="main-img02 main-va" src="{{userInfo.head}}"></image>
+      <text class="main-c2 main-f2">{{userInfo.nickname}}</text>
+    </view>
+
+  </view>
+
+  <!-- 功能 -->
+  <view class="main-w1 main-bg main-box dp-mine-list">
+
+    <view bindtap="myWallet" class="main-w1 main-flex main-box dp-mine-list-content">
+      <view class="main-flex01">
+        <image class="main-img01 main-va" src="../img/wallet.png"></image>
+        <text class="main-va main-f2 main-c2 dp-mine-pl">我的钱包</text>
+      </view>
+
+      <view class="main-flex01 main-tar">
+        <image class="main-img01 main-va" src="../img/my_04.png"></image>
+      </view>
+    </view>
+
+
+    <!-- list two -->
+    <view bindtap="myRecord" class="main-w1 main-flex main-box dp-mine-list-content">
+      <view class="main-flex01">
+        <image class="main-img01 main-va" src="../img/my_02.png"></image>
+        <text class="main-va main-f2 main-c2 dp-mine-pl">我的报名</text>
+      </view>
+
+      <view class="main-flex01 main-tar">
+        <image class="main-img01 main-va" src="../img/my_04.png"></image>
+      </view>
+    </view>
+    <!-- list one -->
+    <view bindtap="myJianli" class="main-w1 main-flex main-box dp-mine-list-content">
+      <view class="main-flex01">
+        <image class="main-img01 main-va" src="../img/my_01.png"></image>
+        <text class="main-va main-f2 main-c2 dp-mine-pl">我的简历</text>
+      </view>
+
+      <view class="main-flex01 main-tar">
+        <image class="main-img01 main-va" src="../img/my_04.png"></image>
+      </view>
+    </view>
+
+    <!-- list three -->
+    <view bindtap="contactUs" class="main-w1 main-flex main-box dp-mine-list-content dp-mine-none">
+      <view class="main-flex01">
+        <image class="main-img01 main-va" src="../img/my_03.png"></image>
+        <text class="main-va main-f2 main-c2 dp-mine-pl">关于我们</text>
+      </view>
+
+      <view class="main-flex01 main-tar">
+        <image class="main-img01 main-va" src="../img/my_04.png"></image>
+      </view>
+    </view>
+
+  </view>
+
+</view>

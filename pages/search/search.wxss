@@ -1,0 +1,43 @@
+/* work.wxss */
+
+/* 推荐 */
+page{
+  font-family: "微软雅黑";
+}
+.dp-recommend{
+  width:100%;
+  margin-top:20rpx;
+  padding:20rpx;
+  overflow:auto;  
+}
+.dp-recommend text{
+  color:#333;
+}
+.dp-recommend text:nth-child(1){
+  padding-left:20rpx;
+  font-size: 36rpx;
+}
+.dp-recommend text:nth-child(2){
+  padding-right:20rpx;
+  font-size: 35rpx;
+}
+.dp-recommend-detail{
+  padding:0 40rpx 10rpx;
+  border-top:2px solid #ddd;
+  position: relative;
+}
+.dp-recommend-top{
+  border-bottom:1px dotted #DEDEDE;
+  overflow:auto;
+  padding:20rpx 0;
+  width: 80%;
+}
+.dp-recommend-bottom{
+  padding:20rpx 0;
+}
+.dp-recommend-bottom text:nth-child(1){
+  flex:1;
+}
+.dp-recommend-bottom text:nth-child(2){
+  flex:3;
+}

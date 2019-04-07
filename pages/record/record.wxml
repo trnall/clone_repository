@@ -1,0 +1,54 @@
+<!-- 职位详情 -->
+  <view class="main-bg main-w1">
+
+    <!-- 第一条 -->
+    <block wx:for-items = "{{recordList}}">
+      <view class="main-box dp-recommend-detail">
+
+      <!-- 上面内容 -->
+      <view class="main-box dp-recommend-top">
+
+        <!-- 左边 -->
+        <view bindtap="workDetail" class="main-lf main-w8" data-job_id="{{item.job_id}}">
+
+          <!-- 上 -->
+          <view class="">
+
+            <text class="main-w6 main-inline main-f2 main-ellipsis main-va">{{item.job_title}}</text>
+
+            <text class="main-tac main-w4 main-inline main-va main-ellipsis" style="color:#3FA8E1;position:relative;font-size:44rpx;top:30rpx;left:20rpx;">{{item.money}}</text>
+
+          </view>
+
+          <!-- 下 -->
+          <view class="main-pt">
+
+            <text class="main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">类型：{{item.job_type}}</text>
+
+            <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">人数：{{item.had_signed}}/{{item.total_number}}</text>
+            <!-- <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va">时长：8H/天</text> -->
+
+          </view>
+
+        </view>
+
+      </view>
+
+      <!-- 下面内容 -->
+      <view bindtap="workDetail" data-job_id="{{item.job_id}}" class="main-box main-w1 dp-recommend-bottom">
+
+        <text class="main-f1 main-c4 main-ellipsis-2" style="width:60%;display:inline-block; ">日期：{{item.created_time}}</text> 
+ <text class="main-tac main-w5 main-inline main-c4 main-f1 main-ellipsis main-va" style="line-height:40rpx;vertical-align:top;">时长：{{item.work_time}}</text>
+        <text class="main-f1 main-c4 main-ellipsis-2">地址：{{item.address}}</text>
+
+      </view>
+      <!-- 右边电话位置 -->
+      <!-- <view bindtap="call" data-tel="{{item.work_name.phone}}" class="main-rt main-w2 main-tac phone">
+        <image class="main-img02" src="../img/tel.png"></image>
+      </view> -->
+
+    </view>
+    </block>
+<view class="more" style="line-height:32rpx;text-align:center;color:#aaa;font-size:24rpx;padding:20rpx;background:#f1f1f1;">{{text}} </view>
+  </view>
+

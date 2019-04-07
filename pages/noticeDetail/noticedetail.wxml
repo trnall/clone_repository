@@ -1,0 +1,35 @@
+<!--noticedetail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container main-none">
+
+  <view class="main-w1 main-box dp-notice-title">
+    
+    <!-- 标题部分 -->
+    <view class="main-w1">
+      <text class="main-inline main-w1 main-f3 main-c2 main-b">{{ newsList.topic_title }}</text>
+      <text class="main-inline main-w1 main-c5 main-pt">{{ newsList.add_time }}</text>
+    </view>
+
+    <!-- 内容部分 -->
+    <view class="main-w1 main-box dp-notice-content main-detail-img">
+      <!-- <template is="wxParse" data="{{wxParseData:newsContent.nodes}}" /> -->
+      <image src="{{ imgUrl }}{{ newsList.topic_image }}"></image>
+      <text>{{ newsList.topic_content }}</text>
+    </view>
+
+  </view>
+
+  <!-- 标题部分
+    <view class="main-w1">
+      <text class="main-inline main-w1 main-f3 main-c2 main-b">小程序在首次提交审核时将被打回</text>
+      <text class="main-inline main-w1 main-c5 main-pt">2017-09-06 14:59</text>
+    </view>
+
+    <view class="main-w1 main-box dp-notice-content">
+      <image src="../img/notice_detail.jpg"></image>
+      <text>当小程序需要开发者提供测试帐号才能完成审核体验时，小程序在首次提交审核时将被打回，再次提交审核时将开放提供测试帐号的入口，该入口将由开发者提供帐号给微信审核人员审核微信小程序时登录使用。</text>
+    </view>
+
+  </view> -->
+
+</view>

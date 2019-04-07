@@ -1,0 +1,8 @@
+<!--pater.wxml-->
+<view class="head">商家合作</view>
+<view class="body">
+<view class="bg"><image src="../img/bg.jpg"></image></view>
+  <view class="parter_title1">鲸火兼职特色：海量用户，最低成本，最快推广   </view>
+  <view class="parter_title">咨询电话</view>
+  <view class="zxPhone">咨询电话：13937138468</view>
+</view>

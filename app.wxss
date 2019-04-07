@@ -1,0 +1,195 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  background: #F3F3F3;  
+  font-family: Microsoft YaHei;
+  font-size: 32rpx;
+} 
+
+page{
+  background:#F3F3F3;
+}
+.main-none{
+  margin:0;
+  padding:0;
+}
+
+.main-pt{
+  padding-top: 20rpx;
+}
+.main-pb{
+  padding-bottom: 20rpx;
+}
+.main-mt{
+  margin-top: 20rpx;
+}
+.main-tac{
+  text-align: center;
+}
+.main-tar{
+  text-align: right;
+}
+.main-va{
+  vertical-align:middle;
+}
+.main-block{
+  display: block;
+}
+.main-bg{
+  background: #fff;
+}
+.main-b{
+  font-weight:bold;
+}
+
+.main-w1,.main-detail-img image{
+  width:100%!important;
+}
+.main-w2{
+  width:20%;
+}
+.main-w3{
+  width:30%;
+}
+.main-w4{
+  width:40%;
+}
+.main-w5{
+  width:33%;
+}
+.main-w6{
+  width:60%;
+}
+.main-w7{
+  width:70%;
+}
+.main-w8{
+  width:100%;
+}
+.main-w9{
+  width:90%;
+}
+.main-swiper-hg{
+    height: 480rpx;
+}
+
+.main-img01{
+  width:40rpx;
+  height:40rpx;
+}
+.main-img02{
+  width:120rpx;
+  height:120rpx;
+}
+.main-img03{
+  width:80rpx;
+  height:80rpx;
+}
+.main-over{
+  overflow:auto;
+}
+.main-lf{
+  float: left;
+}
+.main-rt{
+  float: right;
+}
+
+.main-flex{
+  display: flex;
+}
+.main-flex01{
+  flex: 1;
+}
+.main-flex02{
+  flex: 2;
+}
+.main-flex03{
+  flex: 3;
+}
+.main-box{
+  box-sizing: border-box;
+}
+
+.main-inline{
+  display:inline-block;
+}
+
+.main-f1{
+  font-size:26rpx;
+}
+.main-f2{
+  font-size:36rpx;
+}
+.main-f3{
+  font-size:38rpx;
+}
+
+.main-c1{
+  color:#fff;
+}
+.main-c2{
+  color:#333;
+}
+.main-c3{
+  color:#666;
+}
+.main-c4{
+  color:#656565;
+}
+.main-c5{
+  color:#939393;
+}
+.main-c6{
+  color:#bbb;
+}
+
+.main-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-ellipsis-2{
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  line-height:40rpx;
+
+}
+.phone{
+  position: absolute;
+  right: 40rpx;
+  top: 60rpx;
+}
+.clear:after{
+  clear: both;
+  content: "";
+  display: block;
+}
+.userPhoto{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wei{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #3FA8E1;
+  position: absolute;
+  top: 160rpx;
+  right: 40rpx;
+}
+.wei contact-button{
+  vertical-align: middle;
+  margin-top: 20rpx;
+}

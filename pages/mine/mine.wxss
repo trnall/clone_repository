@@ -1,0 +1,32 @@
+/* mine.wxss */
+.dp-mine{
+  position:relative;
+}
+.dp-mine-hg{
+  height:400rpx;
+}
+.dp-mine-info{
+  position:absolute;
+  top:35%;
+  left:10%;
+}
+.dp-mine-info image{
+  border-radius:50%;
+}
+.dp-mine-info text{
+  padding-left:20rpx;
+}
+
+.dp-mine-list{
+  padding:0 30rpx;
+}
+.dp-mine-list-content{
+  padding:30rpx 0;
+  border-bottom:1px solid #E2E2E2;
+}
+.dp-mine-pl{
+  padding-left:20rpx;
+}
+.dp-mine-none{
+  border-bottom:none;
+}

@@ -1,0 +1,56 @@
+{
+  "debug": true,
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/work/work",
+    "pages/workDetail/workdetail",
+    "pages/recommend/recommend",
+    "pages/mine/mine",
+    "pages/recommendDetail/recommenddetail",
+    "pages/jianli/jianli",
+    "pages/contact/contact",
+    "pages/notice/notice",
+    "pages/noticeDetail/noticedetail",
+    "pages/switchcity/switchcity",
+    "pages/record/record",
+    "pages/search/search",
+    "pages/tabs/tabs",
+    "pages/pater/pater",
+    "pages/fujin/fujin",
+    "pages/wallet/wallet",
+    "pages/kefu/kefu",
+    "pages/mingxi/mingxi"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3A393E",
+    "navigationBarTitleText": "鲸火兼职",
+    "navigationBarTextStyle": "#FFF"
+  },
+  "tabBar": {
+    "borderStyle": "#fff",
+    "backgroundColor": "#f3f2f7",
+    "selectedColor": "#68A1BC",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/img/tab_011.png",
+        "selectedIconPath": "pages/img/tab_01.png"
+      },
+      {
+        "text": "客服",
+        "pagePath": "pages/kefu/kefu",
+        "iconPath": "pages/img/tab_022.png",
+        "selectedIconPath": "pages/img/tab_02.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "pages/img/people.png",
+        "selectedIconPath": "pages/img/tab_03.png"
+      }
+    ]
+  }
+}

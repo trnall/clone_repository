@@ -1,0 +1,31 @@
+/* recommenddetail.wxss */
+@import "../../wxParse/wxParse.wxss";
+.dp-recommend{
+  box-sizing: border-box;
+  padding:20rpx 40rpx;
+  margin:20rpx 0;
+}
+.dp-recommend-hg{
+  height:300rpx;
+}
+.dp-recommend-pd{
+  padding:20rpx;
+}
+.dp-recommend-fw{
+  font-weight:500;
+}
+.dp-recommend-pt{
+  padding-top:10rpx;
+}
+
+.dp-recommend-describe{
+  padding:20rpx;
+  border-radius:10rpx;
+}
+.dp-recommend-title{
+  padding:10rpx 0;
+  font-weight:500;
+}
+.dp-company-lh{
+  line-height:50rpx;
+}

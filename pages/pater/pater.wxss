@@ -1,0 +1,58 @@
+page{
+  font-family: "微软雅黑";
+}
+.head{
+  width: 100%;
+  height: 100rpx;
+  font-size: 42rpx;
+  color: #3FA8E1;
+  font-weight: 500;
+  line-height: 100rpx;
+  text-align: center;
+}
+.body{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+.bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.bg image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 222;
+}
+.parter_title1{
+  position: absolute;
+  z-index: 333;
+  top:550rpx;
+  left:110rpx;
+  width: 72%;
+  font-size: 40rpx;
+  color: #666;
+  line-height: 60rpx;
+}
+.parter_title{
+  position: absolute;
+  z-index: 333;
+  top:720rpx;
+  left:110rpx;
+  width: 72%;
+  font-size: 40rpx;
+  color: #666;
+}
+.zxPhone{
+  position: absolute;
+  z-index: 333;
+  top:800rpx;
+  left:110rpx;
+  width: 72%;
+  font-size: 28rpx;
+  color: #aaa;
+}

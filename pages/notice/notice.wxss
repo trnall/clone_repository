@@ -1,0 +1,15 @@
+/* notice.wxss */
+.dp-notice-top{
+  padding:30rpx;
+  border-bottom:1px solid #F3F3F3;
+}
+.dp-notice-img{
+  width:200rpx;
+  height:200rpx;
+}
+.dp-notice-title{
+  padding:10rpx 30rpx;
+}
+.dp-notice-pt{
+  padding-top:10rpx;
+}

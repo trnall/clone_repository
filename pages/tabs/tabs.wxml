@@ -1,0 +1,20 @@
+<!--tabs.wxml-->
+<view class="container main-none">
+
+    <view class="main-bg main-w1 main-flex main-box" style="padding:0 20rpx;">
+        <!-- one -->
+        <!-- <view data-tab="全部" bindtap="changeTabs" class="main-flex01 main-lf main-tac main-box dp-pd01 {{ tabsActive == '全部' && 'dp-tabs-active' }}">全部</view> -->
+        <!-- two -->
+        <!-- <view data-tab="全部1" bindtap="changeTabs" class="main-flex01 main-lf main-tac main-box dp-pd01 {{ tabsActive == '全部1' && 'dp-tabs-active' }}">全部1</view> -->
+        <!-- three -->
+        <!-- <view data-tab="全部2" bindtap="changeTabs" class="main-flex01 main-lf main-tac main-box dp-pd01 {{ tabsActive == '全部2' && 'dp-tabs-active' }}">全部2</view> -->
+        <!-- four -->
+        <!-- <view data-tab="全部3" bindtap="changeTabs" class="main-flex01 main-lf main-tac main-box dp-pd01 {{ tabsActive == '全部3' && 'dp-tabs-active' }}">全部3</view> -->
+        <!-- five -->
+        <!-- <view data-tab="全部4" bindtap="changeTabs" class="main-flex01 main-lf main-tac main-box dp-pd01 {{ tabsActive == '全部4' && 'dp-tabs-active' }}">全部4</view> -->
+
+        <!-- 遍历追加 -->
+         <view data-tab="{{ item.tab_name }}" wx:for-items="{{ tabsList }}" bindtap="changeTabs" class="main-flex01 main-lf main-tac main-box dp-pd01 {{ tabsActive == item.tab_name && 'dp-tabs-active' }}">{{ item.tab_name }}</view> 
+    </view>
+
+</view>

@@ -1,0 +1,295 @@
+<!--jianli.wxml-->
+<view class="container main-none">
+
+  <!-- 未填写信息时 -->
+  <block class="" wx:if="{{ isLogin == true }}">
+    <!-- 上传头像部分 -->
+    <view class="main-w1 dp-jianli-img">
+
+      <image class="main-w1 dp-jianli-hg" src="../img/jianli_bg.jpg"></image>
+
+      <view class="main-w1 main-tac dp-jianli-upload">
+        <image class="main-img02 userPhoto" src="{{userInfo.head}}"></image>
+        <!-- <text class="main-inline main-w1 main-c1 dp-jianli-pt">点我上传头像</text> -->
+        <!-- <text class="main-inline main-w1 main-c1 dp-jianli-pt">我的头像</text>
+                <text class="main-inline main-w1 main-c1 dp-jianli-pt">别让简历淹没在人海里哦</text> -->
+      </view>
+
+    </view>
+
+    <!-- 填写信息部分 -->
+    <view class="main-bg main-w1 main-box dp-jianli-info">
+
+      <!-- 姓名 -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>姓名
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+          <input class="dp-input" type="text" bindinput="userInput" name="userName" placeholder-class="main-c6" placeholder="请输入姓名" />
+        </view>
+
+      </view>
+
+      <!-- 性别 -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>性别
+        </view>
+
+        <view class="main-flex01 main-tar dp-jianli-lh dp-jianli-pr">
+          <!-- <radio value="0" name="sex" />男
+                <radio value="1" name="sex" />女 -->
+          <radio-group name="radio-group" bindchange="chooseType">
+            <label class="main-inline main-w5">
+                            <radio value="1" />男</label>
+            <label class="main-inline main-w5">
+                            <radio value="2" />女</label>
+          </radio-group>
+
+        </view>
+
+      </view>
+
+      <!-- 出生日期 -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>出生日期
+        </view>
+
+        <view class="main-flex01 main-tar dp-jianli-lh dp-jianli-pr">
+          <picker mode="date" value="{{dateValue}}" start="1909-01-01" end="2999-12-12" bindchange="datePickerBindchange">
+            {{dateValue}}
+          </picker>
+        </view>
+
+      </view>
+
+      <!-- 手机号码 -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>手机号码
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+          <input class="dp-input" type="text" bindinput="telInput" name="userTel" placeholder-class="main-c6" placeholder="请输入手机号" />
+        </view>
+
+      </view>
+
+      <!-- 现居住地 -->
+      <!-- <view class="main-w1 main-flex dp-jianli-info01 dp-jianli-hide">
+
+                <view class="main-flex01 dp-jianli-lh">
+                    <text class="main-va dp-jianli-info02">*</text>现居住地
+                </view>
+
+                <view class="main-flex03 dp-jianli-lh">
+                    <input class="dp-input" type="text" bindinput="addressInput" name="userAddress" placeholder-class="main-c6" placeholder="请输入居住地" />
+                </view>
+
+            </view> -->
+      <!--身高  -->
+
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>身高(cm)
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+          <input class="dp-input" type="text" bindinput="heightInput" name="" placeholder-class="main-c6" placeholder="请输入身高" />
+        </view>
+
+      </view>
+      <!--学校  -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>学校
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+          <input class="dp-input" type="text" bindinput="schoolInput" name="" placeholder-class="main-c6" placeholder="请输入学校" />
+        </view>
+
+      </view>
+     <!--年级  -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>年级
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+         <picker bindchange="bindPickerChange" value="{{grade1[gradeIndex]}}" range="{{grade1}}" style="font-size:28rpx;">
+            <view class="picker">
+              {{grade}}
+            </view>
+          </picker>
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 保存按钮 -->
+    <!-- <view bindtap="saveInfo" class="main-w6 main-c1 main-box main-tac dp-jianli-save">保存</view> -->
+
+  </block>
+
+
+
+  <!-- 如果简历已完善把信息填写进去 -->
+  <block class="" wx:if="{{ isLogin == false }}">
+    <!-- 上传头像部分 -->
+    <view class="main-w1 dp-jianli-img">
+
+      <image class="main-w1 dp-jianli-hg" src="../img/jianli_bg.jpg"></image>
+
+      <view class="main-w1 main-tac dp-jianli-upload">
+        <image class="main-img02 userPhoto" src="{{ userInfo.head }}"></image>
+        <!-- <text class="main-inline main-w1 main-c1 dp-jianli-pt">点我上传头像</text>  -->
+        <!-- <text class="main-inline main-w1 main-c1 dp-jianli-pt">我的头像</text> 
+                <text class="main-inline main-w1 main-c1 dp-jianli-pt">别让简历淹没在人海里哦</text> -->
+      </view>
+
+    </view>
+
+    <!-- 填写信息部分 -->
+    <view class="main-bg main-w1 main-box dp-jianli-info">
+
+      <!-- 姓名 -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>姓名
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+          <input class="dp-input" type="text" bindinput="userInput" name="userName" placeholder-class="main-c6" value="{{ userList.resume_name }}" />
+        </view>
+
+      </view>
+
+      <!-- 性别 -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>性别
+        </view>
+
+        <view class="main-flex01 main-tar dp-jianli-lh dp-jianli-pr">
+          <!-- <radio value="0" name="sex" />男
+                <radio value="1" name="sex" />女 -->
+          <radio-group name="radio-group" bindchange="chooseType">
+            <label class="main-inline main-w5">
+                            <radio value="1" checked="{{ isBoy }}"/>男</label>
+            <label class="main-inline main-w5">
+                            <radio value="2" checked="{{ isGirl }}" />女</label>
+          </radio-group>
+
+        </view>
+
+      </view>
+
+      <!-- 出生日期 -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>出生日期
+        </view>
+
+        <view class="main-flex01 main-tar dp-jianli-lh dp-jianli-pr">
+          <picker mode="date" value="{{dateValue}}" start="1909-01-01" end="2999-12-12" bindchange="datePickerBindchange">
+            {{dateValue}}
+          </picker>
+        </view>
+
+      </view>
+
+      <!-- 手机号码 -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>手机号码
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+          <input class="dp-input" type="text" bindinput="telInput" name="userTel" placeholder-class="main-c6" value="{{ userList.mobile }}" />
+        </view>
+
+      </view>
+
+      <!-- 现居住地 -->
+      <!-- <view class="main-w1 main-flex dp-jianli-info01 dp-jianli-hide">
+
+                <view class="main-flex01 dp-jianli-lh">
+                    <text class="main-va dp-jianli-info02">*</text>现居住地
+                </view>
+
+                <view class="main-flex03 dp-jianli-lh">
+                    <input class="dp-input" type="text" bindinput="addressInput" name="userAddress" placeholder-class="main-c6" value="{{ userList.address }}" />
+                </view>
+
+            </view> -->
+      <!--身高  -->
+
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>身高(cm)
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+          <input class="dp-input" type="text" bindinput="heightInput" name="height" placeholder-class="main-c6" placeholder="请输入身高" value="{{height}}" />
+        </view>
+
+      </view>
+      <!--学校  -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>学校
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+          <input class="dp-input" type="text" bindinput="schoolInput" name="school" placeholder-class="main-c6" placeholder="请输入学校" value="{{school}}" />
+        </view>
+
+      </view>
+      <!--年级  -->
+      <view class="main-w1 main-flex dp-jianli-info01">
+
+        <view class="main-flex01 dp-jianli-lh">
+          <text class="main-va dp-jianli-info02">*</text>年级
+        </view>
+
+        <view class="main-flex03 dp-jianli-lh">
+         <picker bindchange="bindPickerChange" value="{{grade1[index]}}" range="{{grade1}}" style="font-size:28rpx;">
+            <view class="picker">
+             {{grade}}
+            </view>
+          </picker>
+        </view>
+
+      </view>
+    </view>
+
+    <!-- 保存按钮 -->
+    <!-- <view bindtap="saveInfo" class="main-w6 main-c1 main-box main-tac dp-jianli-save">保存</view> -->
+
+  </block>
+
+  <!-- 保存按钮 -->
+  <!-- <view bindtap="saveInfo" class="main-w6 main-c1 main-box main-tac dp-jianli-save">保存</view> -->
+
+  <view class="main-w1 main-tac dp-jianli-save">
+    <text bindtap="saveInfo" class="main-inline main-w6 main-c1 main-box dp-jianli-btn">保存</text>
+  </view>
+
+</view>

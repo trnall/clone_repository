@@ -1,0 +1,34 @@
+/* mingxi.wxss */
+page{
+  font-family: "微软雅黑";
+}
+.mingxiList{
+  width: 90%;
+  padding: 0 5%;
+  background: #fff;
+}
+.mingxiItem{
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  border-bottom: 1px solid #ddd;
+}
+.item_icon{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 30rpx;
+}
+.item_icon image{
+  width: 100%;
+  height: 100%;
+}
+.money{
+  float: right;
+}
+.date{
+  color: #aaa;
+  margin-top: 10rpx;
+}
